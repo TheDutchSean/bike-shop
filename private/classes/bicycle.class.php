@@ -79,7 +79,8 @@
             $this->condition_id = $value; 
         }
 
-        public function set_catergory($value){
+        public function set_category($value){
+            echo $value;
             $this->category = self::CATEGORIES[$value]; 
         }
 
@@ -89,6 +90,7 @@
             }       
         }
 
+        // https://www.php.net/manual/en/numberformatter.formatcurrency.php
         public function get_price(){
             return "$".substr($this->price,0,-2).",".substr($this->price,-2,2);          
         }
